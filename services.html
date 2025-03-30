@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .services-hero {
+            background-image: url('https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .pricing-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .pricing-popular {
+            border-top: 4px solid #3B82F6;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Portal</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+                        <a href="about.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
+                        <a href="services.html" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold">Services</a>
+                        <a href="courses.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Courses</a>
+                        <a href="contact.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-blue-500 hover:text-white transition duration-300">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero h-96 flex items-center">
+        <div class="container mx-auto px-6 text-white">
+            <h1 class="text-5xl font-bold mb-4">Our Services</h1>
+            <p class="text-xl">Comprehensive digital solutions tailored to your business needs</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What We Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-lg p-8 service-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-laptop-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                    <p class="text-gray-600 mb-6">Custom websites and web applications built with modern technologies like React, Vue, and Node.js.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>SEO Optimized</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Performance Focused</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-500 font-semibold inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-lg p-8 service-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Mobile App Development</h3>
+                    <p class="text-gray-600 mb-6">iOS and Android applications that deliver seamless user experiences with Flutter and React Native.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Cross-Platform</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Native Performance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>App Store Optimization</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-500 font-semibold inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-lg p-8 service-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">AI & Machine Learning</h3>
+                    <p class="text-gray-600 mb-6">Custom AI solutions including predictive analytics, computer vision, and natural language processing.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom Model Training</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Data Pipeline Setup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>API Integration</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-500 font-semibold inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-lg p-8 service-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cybersecurity</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive security assessments and protection for your digital assets and infrastructure.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Penetration Testing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Security Audits</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Incident Response</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-500 font-semibold inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gray-50 rounded-lg p-8 service-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-cloud text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cloud Solutions</h3>
+                    <p class="text-gray-600 mb-6">Migration, optimization, and management of cloud infrastructure on AWS, Azure, and Google Cloud.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Infrastructure as Code</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Cost Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>24/7 Monitoring</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-500 font-semibold inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gray-50 rounded-lg p-8 service-card transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-paint-brush text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">UX/UI Design</h3>
+                    <p class="text-gray-600 mb-6">Beautiful, intuitive interfaces designed to enhance user engagement and satisfaction.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>User Research</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Prototyping</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Usability Testing</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="text-blue-500 font-semibold inline-flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-xl text-center text-gray-600 mb-12">Choose the plan that fits your needs</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-lg shadow-md p-8 pricing-card transition duration-300">
+                    <h3 class="text-xl font-semibold text-center mb-4">Basic</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold">$99</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Up to 5 pages website</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic SEO setup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Mobile responsive</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span>No e-commerce</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span>No CMS integration</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Professional Plan (Popular) -->
+                <div class="bg-white rounded-lg shadow-lg p-8 pricing-card pricing-popular transition duration-300 transform">
+                    <div class="text-center mb-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">MOST POPULAR</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-4">Professional</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold">$299</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Up to 20 pages website</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced SEO</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>CMS integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic e-commerce</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span>No custom development</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-lg shadow-md p-8 pricing-card transition duration-300">
+                    <h3 class="text-xl font-semibold text-center mb-4">Enterprise</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold">$599</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Unlimited pages</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Premium SEO</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom CMS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced e-commerce</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom development</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to transform your business?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let's discuss how we can help you achieve your digital goals with our expert services.</p>
+            <a href="contact.html" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg inline-block transition duration-300">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Portal</h3>
+                    <p class="text-gray-400">Transforming ideas into digital reality.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul>
+                            <li class="mb-2"><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                            <li class="mb-2"><a href="services.html" class="text-gray-400 hover:text-white">Services</a></li>
+                            <li class="mb-2"><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul>
+                            <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Web Development</a></li>
+                            <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Mobile Apps</a></li>
+                            <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">AI Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
