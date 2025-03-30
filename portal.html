@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal - Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        .section {
+            min-height: 100vh;
+            padding: 4rem 0;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #3B82F6;
+        }
+        
+        /* Hero Sections */
+        #home {
+            background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        #courses {
+            background-image: url('https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        #about {
+            background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        #services {
+            background-image: url('https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        #contact {
+            background-image: url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Card Hover Effects */
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Timeline */
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #E5E7EB;
+        }
+        
+        /* Form Styles */
+        .form-input:focus {
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#home" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Portal</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#home" class="nav-link py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+                        <a href="#about" class="nav-link py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">About</a>
+                        <a href="#services" class="nav-link py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Services</a>
+                        <a href="#courses" class="nav-link py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Courses</a>
+                        <a href="#contact" class="nav-link py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4">
+            <a href="#home" class="block py-2 text-gray-500 hover:text-blue-500">Home</a>
+            <a href="#about" class="block py-2 text-gray-500 hover:text-blue-500">About</a>
+            <a href="#services" class="block py-2 text-gray-500 hover:text-blue-500">Services</a>
+            <a href="#courses" class="block py-2 text-gray-500 hover:text-blue-500">Courses</a>
+            <a href="#contact" class="block py-2 text-gray-500 hover:text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Modern Digital Solutions</h1>
+            <p class="text-xl mb-8">Transforming ideas into reality with cutting-edge technology</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#services" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Explore Services</a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-blue-500 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-white py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Our Company</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Story</h3>
+                    <p class="text-gray-600 mb-4">Founded in 2015, Portal began as a small team of passionate developers and designers with a shared vision to create impactful digital solutions.</p>
+                    <p class="text-gray-600 mb-4">What started as a modest startup has grown into a leading digital agency serving clients across multiple industries, from startups to Fortune 500 companies.</p>
+                    <p class="text-gray-600">Today, we're proud to have delivered over 200 successful projects and trained thousands of professionals through our courses.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Our Team" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Cards (3 shown for brevity) -->
+                <div class="bg-white rounded-lg p-8 card-hover transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-laptop-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                    <p class="text-gray-600 mb-6">Custom websites and web applications built with modern technologies.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>SEO Optimized</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-8 card-hover transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Mobile Apps</h3>
+                    <p class="text-gray-600 mb-6">iOS and Android applications with seamless user experiences.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Cross-Platform</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Native Performance</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-8 card-hover transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">AI Solutions</h3>
+                    <p class="text-gray-600 mb-6">Custom AI solutions including predictive analytics.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom Model Training</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Data Pipeline Setup</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section bg-white py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Featured Courses</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Course Cards (3 shown for brevity) -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg" alt="Web Development Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Modern JavaScript</h3>
+                        <p class="text-blue-500 mb-4">$299</p>
+                        <p class="text-gray-600 mb-4">Master ES6+ features and modern frameworks</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg" alt="Data Science Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Python for Data Science</h3>
+                        <p class="text-blue-500 mb-4">$249</p>
+                        <p class="text-gray-600 mb-4">Learn Pandas, NumPy and data visualization</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <img src="https://images.pexels.com/photos/60504/pexels-photo-60504.jpeg" alt="Cybersecurity Course" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Ethical Hacking</h3>
+                        <p class="text-blue-500 mb-4">$349</p>
+                        <p class="text-gray-600 mb-4">Learn penetration testing and security</p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Enroll Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="form-input w-full px-4 py-2 border rounded-lg focus:outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Our Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+                            <p>123 Tech Street, Silicon Valley, CA 94025</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-500 mr-3"></i>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-500 mr-3"></i>
+                            <p>info@portal.com</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-semibold mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-blue-500"><i class="fab fa-facebook-f text-2xl"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-blue-500"><i class="fab fa-twitter text-2xl"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-blue-500"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-blue-500"><i class="fab fa-instagram text-2xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold">Portal</h3>
+                    <p class="text-gray-400">Transforming ideas into digital reality.</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">&copy; 2023 Portal. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Highlight active nav link
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
